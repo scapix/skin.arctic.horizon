@@ -1181,46 +1181,46 @@
                     <!-- Textures for Iconic Menu -->
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="940" />
-                        <param name="visible" value="Integer.IsGreater(Container(301).NumItems,7)" />
+                        <param name="visible" value="Integer.IsGreater(Container(301).NumItems,8)" />
                         <param name="slide" value="0" />
                     </include>
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="840" />
-                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,7)" />
+                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,8)" />
                         <param name="slide" value="50" />
                     </include>
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="740" />
-                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,6)" />
+                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,7)" />
                         <param name="slide" value="100" />
                     </include>
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="640" />
-                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,5)" />
+                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,6)" />
                         <param name="slide" value="150" />
                     </include>
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="540" />
-                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,4)" />
+                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,5)" />
                         <param name="slide" value="200" />
                     </include>
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="440" />
-                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,3)" />
+                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,4)" />
                         <param name="slide" value="250" />
                     </include>
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="340" />
-                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,2)" />
+                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,3)" />
                         <param name="slide" value="300" />
                     </include>
                     <include content="Home_Menu_Horizontal_Texture" condition="Skin.HasSetting(HomeIconicMenu)">
                         <param name="width" value="240" />
-                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,1)" />
+                        <param name="visible" value="Integer.IsEqual(Container(301).NumItems,2)" />
                         <param name="slide" value="350" />
                     </include>
 
-                    <control type="group">
+                    <!-- <control type="group">
                         <left>20</left>
                         <width>80</width>
                         <control type="group">
@@ -1268,12 +1268,12 @@
                                 <texture colordiffuse="main_fg_30">common/white.png</texture>
                             </control>
                         </control>
-                    </control>
+                    </control> -->
 
 
                     <control type="list" id="$PARAM[mainmenu-id]">
                         <orientation>horizontal</orientation>
-                        <left>100</left>
+                        <left>0</left>
                         <include>Home_Movement_OnFocus</include>
                         <include>Home_Movement_LeftRight</include>
                         <itemlayout width="100" condition="Skin.HasSetting(HomeIconicMenu)">
@@ -1551,3 +1551,4 @@
     </include>
 </includes>
 
+-
