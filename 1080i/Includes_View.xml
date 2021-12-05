@@ -379,12 +379,36 @@
                 <texture colordiffuse="$PARAM[bg_color]" border="10">$VAR[Image_Overlay_Backing$PARAM[affix],,.png]</texture>
             </control>
             <control type="image">
+                <top>15</top>
+                <right>15</right>
+                <width>48</width>
+                <height>48</height>
+                <texture colordiffuse="$VAR[ColorHighlight]" border="10">$VAR[Image_Overlay_Backing$PARAM[affix],,.png]</texture>
+                <visible>String.IsEqual($PARAM[listitem].Overlay,OverlayWatched.png) | [!String.IsEmpty($PARAM[listitem].PlayCount) + !Integer.IsEqual($PARAM[listitem].PlayCount,0) + !String.IsEqual($PARAM[listitem].DBType,song) + !String.IsEqual($PARAM[listitem].DBType,album) + !String.IsEqual($PARAM[listitem].DBType,artist) + !String.IsEqual($PARAM[listitem].DBType,image) + !String.IsEqual($PARAM[listitem].DBType,addon)]</visible>
+                <visible>Integer.IsEqual($PARAM[listitem].Property(UnWatchedEpisodes),0) | Skin.HasSetting(DisableIndicator.Episodes)</visible>
+                <visible>!$PARAM[listitem].IsRecording + !$PARAM[listitem].HasTimer</visible>
+                <visible>!$PARAM[listitem].IsResumable | Skin.HasSetting(DisableIndicator.Progress)</visible>
+            </control>
+            <!-- scape: icon watched, new ... -->
+            <control type="image">
                 <top>16</top>
                 <right>16</right>
                 <width>24</width>
                 <height>24</height>
                 <texture colordiffuse="$PARAM[fg_color]">$VAR[Image_Overlay$PARAM[affix]]</texture>
             </control>
+            <control type="image">
+                <top>16</top>
+                <right>16</right>
+                <width>24</width>
+                <height>24</height>
+                <texture colordiffuse="ff000000">$VAR[Image_Overlay$PARAM[affix]]</texture>
+                <visible>String.IsEqual($PARAM[listitem].Overlay,OverlayWatched.png) | [!String.IsEmpty($PARAM[listitem].PlayCount) + !Integer.IsEqual($PARAM[listitem].PlayCount,0) + !String.IsEqual($PARAM[listitem].DBType,song) + !String.IsEqual($PARAM[listitem].DBType,album) + !String.IsEqual($PARAM[listitem].DBType,artist) + !String.IsEqual($PARAM[listitem].DBType,image) + !String.IsEqual($PARAM[listitem].DBType,addon)]</visible>
+                <visible>Integer.IsEqual($PARAM[listitem].Property(UnWatchedEpisodes),0) | Skin.HasSetting(DisableIndicator.Episodes)</visible>
+                <visible>!$PARAM[listitem].IsRecording + !$PARAM[listitem].HasTimer</visible>
+                <visible>!$PARAM[listitem].IsResumable | Skin.HasSetting(DisableIndicator.Progress)</visible>
+            </control>
+            <!-- scape: nepozretych epizod -->
             <control type="label">
                 <top>15</top>
                 <right>15</right>
