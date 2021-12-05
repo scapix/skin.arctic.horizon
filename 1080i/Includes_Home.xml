@@ -340,7 +340,7 @@
         </include>
         <include content="Object_Control" condition="Skin.HasSetting(EnableHorizontalHome)">
             <param name="type" value="group" />
-
+            <left>-50</left>
             <animation effect="slide" end="100" condition="!Skin.HasSetting(HomeIconicMenu) + Control.HasFocus(303) + Container(301).Position(0)">Conditional</animation>
             <animation effect="slide" end="300" condition="!Skin.HasSetting(HomeIconicMenu) + Control.HasFocus(303) + Container(301).Position(1)">Conditional</animation>
             <animation effect="slide" end="500" condition="!Skin.HasSetting(HomeIconicMenu) + Control.HasFocus(303) + Container(301).Position(2)">Conditional</animation>
