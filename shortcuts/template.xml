@@ -87,6 +87,13 @@
                         <scrolltime tween="quadratic">400</scrolltime>
 
                         <!-- Movement to HMenu -->
+                        <onup>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 6],0,absolute)</onup>
+                        <onup>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 5],0,absolute)</onup>
+                        <onup>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 4],0,absolute)</onup>
+                        <onup>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 3],0,absolute)</onup>
+                        <onup>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 2],0,absolute)</onup>
+                        <onup>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 1],0,absolute)</onup>
+
                         <onup condition="Skin.HasSetting(EnableHorizontalHome)">SetProperty(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget,$INFO[System.CurrentControlID])</onup>
                         <onup condition="Skin.HasSetting(EnableHorizontalHome)">301</onup>
                         <ondown condition="Skin.HasSetting(EnableHorizontalHome)">SetFocus(3991)</ondown>
@@ -424,7 +431,13 @@
                     <param name="control-type" value="fixedlist" />
                     <top>$SKINSHORTCUTS[widgetTop]</top>
                     <onback>ClearProperty(CurrentWidget,Home)</onback>
-                    <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 1])</onback>
+                    <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 6],0,absolute)</onback>
+                    <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 5],0,absolute)</onback>
+                    <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 4],0,absolute)</onback>
+                    <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 3],0,absolute)</onback>
+                    <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 2],0,absolute)</onback>
+                    <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 1],0,absolute)</onback>
+                    <!-- <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 1])</onback> -->
                     <onback>301</onback>
                     <onfocus condition="!$SKINSHORTCUTS[widgetSubmenu]">SetProperty(TMDbHelper.WidgetContainer,$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]],Home)</onfocus>
                     <onfocus>SetProperty(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget,$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]],Home)</onfocus>
