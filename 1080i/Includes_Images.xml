@@ -263,7 +263,7 @@
 
     <variable name="Image_Overlay_Watched">
         <value condition="!Skin.HasSetting(EnableClassicIndicators)">common/null.png</value>
-        <value>indicator/checkmark-classic.png</value>
+        <value>indicator/checkmark.png</value>
     </variable>
 
     <variable name="Image_Fanart">

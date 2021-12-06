@@ -397,17 +397,6 @@
                 <height>24</height>
                 <texture colordiffuse="$PARAM[fg_color]">$VAR[Image_Overlay$PARAM[affix]]</texture>
             </control>
-            <control type="image">
-                <top>16</top>
-                <right>16</right>
-                <width>24</width>
-                <height>24</height>
-                <texture colordiffuse="ff000000">$VAR[Image_Overlay$PARAM[affix]]</texture>
-                <visible>String.IsEqual($PARAM[listitem].Overlay,OverlayWatched.png) | [!String.IsEmpty($PARAM[listitem].PlayCount) + !Integer.IsEqual($PARAM[listitem].PlayCount,0) + !String.IsEqual($PARAM[listitem].DBType,song) + !String.IsEqual($PARAM[listitem].DBType,album) + !String.IsEqual($PARAM[listitem].DBType,artist) + !String.IsEqual($PARAM[listitem].DBType,image) + !String.IsEqual($PARAM[listitem].DBType,addon)]</visible>
-                <visible>Integer.IsEqual($PARAM[listitem].Property(UnWatchedEpisodes),0) | Skin.HasSetting(DisableIndicator.Episodes)</visible>
-                <visible>!$PARAM[listitem].IsRecording + !$PARAM[listitem].HasTimer</visible>
-                <visible>!$PARAM[listitem].IsResumable | Skin.HasSetting(DisableIndicator.Progress)</visible>
-            </control>
             <!-- scape: nepozretych epizod -->
             <control type="label">
                 <top>15</top>
@@ -446,7 +435,7 @@
                 <param name="affix" value="$PARAM[affix]" />
                 <param name="listitem" value="$PARAM[listitem]" />
                 <param name="bg_color" value="$VAR[ColorHighlight]" />
-                <param name="fg_color" value="ff000000" />
+                <param name="fg_color" value="ffffffff" />
             </include>
             <include content="View_WatchedOverlay_Content" condition="!Skin.HasSetting(EnableClassicIndicators)">
                 <param name="affix" value="$PARAM[affix]" />
