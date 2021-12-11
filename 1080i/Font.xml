@@ -108,9 +108,9 @@
         <font>
             <name>font_overlay_plotbox</name>
             <filename>Roboto-Regular-Linespacing.ttf</filename>
-            <linespacing>1.45</linespacing>
+            <linespacing>1</linespacing>
             <aspect>0.9</aspect>
-            <size>48</size>
+            <size>44</size>
         </font>
         <font>
             <name>font_info_display</name>
@@ -167,7 +167,7 @@
         <font>
             <name>font_overlay_title</name>
             <filename>RobotoCondensed-Bold.ttf</filename>
-            <size>100</size>
+            <size>60</size>
             <aspect>0.9</aspect>
             <style>bold</style>
         </font>
