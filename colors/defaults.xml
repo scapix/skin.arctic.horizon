@@ -39,7 +39,7 @@
     <color name="Selected">ffffffff</color>
 
     <!-- Shadows -->
-    <color name="Shadow">55ffffff</color>
+    <color name="Shadow">00ffffff</color>
 
     <!-- Background -->
     <color name="HomePanel">e7181818</color>

@@ -5,13 +5,14 @@
     <!-- ====== -->
 
     <include name="Topbar_Left">
+        <param name="left" default="view_pad" />
         <param name="fgcolor" default="main_fg" />
         <param name="label" default="$VAR[Label_Header_Content]" />
         <param name="visible" default="!$EXP[Exp_InfoActive] + !$EXP[Exp_ShowPlotOverlay]" />
         <definition>
             <control type="group">
                 <top>view_pad</top>
-                <left>view_pad</left>
+                <left>$PARAM[left]</left>
                 <height>view_header</height>
                 <align>left</align>
                 <visible>$PARAM[visible]</visible>
