@@ -428,7 +428,7 @@
                     <param name="infoslide" value="![$SKINSHORTCUTS[widgetIcon] | $SKINSHORTCUTS[widgetSubmenu]] + [$SKINSHORTCUTS[widgetInfo] | $SKINSHORTCUTS[isSecondPosition]]" />
                     <param name="backpanel" value="![$SKINSHORTCUTS[widgetIcon] | $SKINSHORTCUTS[widgetSubmenu]] + [$SKINSHORTCUTS[widgetInfo] | [$SKINSHORTCUTS[isSecondPosition] + String.IsEqual(Container(3700).ListItemAbsolute(0).Property(list),Background) + !Integer.IsEqual(Container(3001).NumItems,0)]] + [Control.HasFocus($PYTHON[30000 + int(mainmenuid) * 100 + int(id)]) | Integer.IsEqual(Window(Home).Property(HW_$PYTHON[50000 + int(mainmenuid) * 100]_InfoWidget),$PYTHON[30000 + int(mainmenuid) * 100 + int(id)])]" />
                     <param name="clearart" value="$SKINSHORTCUTS[widgetInfo] | [$SKINSHORTCUTS[isSecondPosition] + String.IsEqual(Container(3700).ListItemAbsolute(0).Property(list),Background) + !Integer.IsEqual(Container(3001).NumItems,0)]" />
-                    <param name="control-type" value="fixedlist" />
+                    <param name="control-type" value="list" />
                     <top>$SKINSHORTCUTS[widgetTop]</top>
                     <onback>ClearProperty(CurrentWidget,Home)</onback>
                     <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 6],0,absolute)</onback>

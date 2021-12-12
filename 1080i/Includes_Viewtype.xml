@@ -321,7 +321,7 @@
 
     <!-- Posters -->
     <include name="Viewtype_Poster">
-        <param name="control-type" default="fixedlist" />
+        <param name="control-type" default="panel" />
         <param name="orientation" default="horizontal" />
         <param name="tween" default="quadratic" />
         <param name="scrolltime" default="400" />
