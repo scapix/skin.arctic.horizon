@@ -126,7 +126,7 @@
                 <include content="DialogVideoInfo_WidgetGroupList">
                     <include content="DialogVideoInfo_MainInfo">
                         <include content="View_Info_Grouplist">
-                            <height>285</height>
+                            <height>385</height>
                         </include>
                     </include>
                     <include content="Info_Button_Grouplist">
@@ -481,7 +481,7 @@
                     <onfocus>ActivateWindow(1142)</onfocus>
                 </control>
                 <nested />
-                <top>infowidgets_item_top</top>
+                <top>18</top>
                 <right>0</right>
                 <height>item_widget_details_height</height>
                 <control type="grouplist">

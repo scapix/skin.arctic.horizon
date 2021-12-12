@@ -28,7 +28,7 @@
 
     <include name="View_Info_Grouplist">
         <param name="container" default="" />
-        <param name="plotheight" default="80" />
+        <param name="plotheight" default="120" />
         <param name="plotheight-nr" default="120" />
         <param name="codectop" default="20" />
         <param name="visible-details" default="true" />

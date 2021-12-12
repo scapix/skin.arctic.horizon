@@ -348,7 +348,7 @@
     <include name="Defs_InfoButtonList">
         <left>80</left>
         <right>80</right>
-        <bottom>-50</bottom>
+        <bottom>-80</bottom>
         <height>130</height>
     </include>
 
@@ -360,7 +360,7 @@
         <orientation>horizontal</orientation>
         <usecontrolcoords>true</usecontrolcoords>
         <itemgap>-10</itemgap>
-        <bottom>400</bottom>
+        <bottom>368</bottom>
     </include>
 
     <include name="Defs_Settings_OnLoad">

@@ -91,11 +91,11 @@
                                     <include>Animation_FadeOut</include>
                                     <include>Object_DoubleArrow_Down</include>
                                 </control>
-                                <include content="View_Info_Grouplist">
+                                <!-- <include content="View_Info_Grouplist">
                                     <param name="visible-details" value="false" />
                                     <height>285</height>
-                                </include>
-                                <!-- <control type="label">
+                                </include> -->
+                                <control type="label">
                                     <top>20</top>
                                     <description>header label</description>
                                     <left>0</left>
@@ -104,13 +104,13 @@
                                     <font>font_overlay_title</font>
                                     <textcolor>main_fg_100</textcolor>
                                     <label>$VAR[Label_OverlayTitle]</label>
-                                </control> -->
+                                </control>
                                 <control type="textbox" id="9609">
                                     <description>textarea</description>
                                     <left>0</left>
                                     <right>0</right>
-                                    <top>150</top>
-                                    <bottom>70</bottom>
+                                    <top>100</top>
+                                    <bottom>50</bottom>
                                     <align>left</align>
                                     <textcolor>main_fg_70</textcolor>
                                     <font>font_overlay_plotbox</font>
