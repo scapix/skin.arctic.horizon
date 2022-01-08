@@ -439,6 +439,21 @@
                     <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 1],0,absolute)</onback>
                     <!-- <onback>SetFocus($PYTHON[30000 + int(mainmenuid) * 100 + 1])</onback> -->
                     <onback>301</onback>
+
+                    <animation type="conditional" condition="Control.HasFocus($PYTHON[30000 + int(mainmenuid) * 100 + int(id)]) | Integer.IsGreater(Window(Home).Property(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget),$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]])">
+                        <effect type="slide" start="0,0" end="0,-100" time="150" tween="circle" easing="inOut" />
+                    </animation>
+                    <animation type="conditional" condition="!Control.HasFocus($PYTHON[30000 + int(mainmenuid) * 100 + int(id)]) + !Integer.IsGreater(Window(Home).Property(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget),$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]])]">
+                        <effect type="slide" start="0,-100" end="0,0" time="150" tween="circle" easing="inOut" />
+                    </animation>
+                    <!-- <animation type="conditional" condition="Control.HasFocus($PYTHON[30000 + int(mainmenuid) * 100 + int(id)]) | Integer.IsEqual(Window(Home).Property(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget),$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]])">
+                        <effect type="fade" start="50" end="100" time="150" tween="cubic" easing="inOut" />
+                    </animation>
+                    <animation type="conditional" condition="!Control.HasFocus($PYTHON[30000 + int(mainmenuid) * 100 + int(id)]) + !Integer.IsEqual(Window(Home).Property(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget),$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]])]">
+                        <effect type="fade" start="100" end="50" time="150"  tween="cubic" easing="inOut" />
+                    </animation> -->
+                    <!-- <param name="textpanel" value="Control.HasFocus($PYTHON[30000 + int(mainmenuid) * 100 + int(id)]) | Integer.IsEqual(Window(Home).Property(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget),$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]])" /> -->
+
                     <onfocus condition="!$SKINSHORTCUTS[widgetSubmenu]">SetProperty(TMDbHelper.WidgetContainer,$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]],Home)</onfocus>
                     <onfocus>SetProperty(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget,$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]],Home)</onfocus>
                     <onfocus condition="!Skin.HasSetting(DisableBlur) + !Skin.HasSetting(NoFanart) + !$SKINSHORTCUTS[widgetSubmenu]">SetProperty(TMDbHelper.Blur.SourceImage,$SKINSHORTCUTS[widgetSourceArt],Home)</onfocus>

@@ -71,12 +71,21 @@
         <param name="colordiffuse" default="AltPosterBack" />
         <param name="pad" default="0" />
         <definition>
+
+            <!-- scape: scale focused art -->
+            <animation type="focus">
+                <effect type="zoom" start="100" end="111" time="150" tween="sine" easing="inout" center="auto" />
+            </animation>
+            <animation type="unfocus">
+                <effect type="zoom" start="111" end="100" time="150" tween="sine" easing="inout" center="auto" />
+            </animation>
             <control type="image">
                 <include content="Defs_Pad">
                     <param name="pad" value="$PARAM[pad]" />
                 </include>
                 <bordersize>20</bordersize>
-                <bordertexture border="30" colordiffuse="Shadow">common/shadow-20.png</bordertexture>
+                <!-- scape: art shadow -->
+                <bordertexture border="30" colordiffuse="44000000">common/shadow-20.png</bordertexture>
                 <texture border="30" colordiffuse="$PARAM[colordiffuse]">common/box.png</texture>
                 <nested />
             </control>

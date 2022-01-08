@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1199">
     <zorder>2</zorder>
-    <visible>Skin.HasSetting(DebugInfo) | Skin.HasSetting(DebugGrid)</visible>
+    <!-- <visible>Skin.HasSetting(DebugInfo) | Skin.HasSetting(DebugGrid)</visible> -->
+    <visible>true</visible>
     <controls>
 
         <control type="group">

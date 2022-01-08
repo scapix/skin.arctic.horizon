@@ -79,7 +79,23 @@
                         <visible>Container($PARAM[id]).IsUpdating</visible>
                         <visible>Integer.IsEqual(Container($PARAM[id]).NumAllItems,0) | $PARAM[showonupdate]</visible>
                     </control>
+
+                    <animation type="conditional" condition="!Control.HasFocus($PARAM[id]) + !Control.HasFocus($PARAM[altid]) + !Integer.IsGreater(Window(Home).Property(TMDbHelper.WidgetContainer),$PARAM[id])">
+                        <effect type="slide" start="0,-50" end="0,0" time="150" tween="circle" easing="inOut" />
+                    </animation>
+                    <animation type="conditional" condition="Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid]) | Integer.IsGreater(Window(Home).Property(TMDbHelper.WidgetContainer),$PARAM[id])">
+                        <effect type="slide" start="0,0" end="0,-50" time="150" tween="circle" easing="inOut" />
+                    </animation>
+
                     <control type="grouplist" description="Focused List">
+       
+                        <animation type="conditional" condition="Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid]))">
+                            <effect type="zoom" start="90" end="100" time="150"  tween="sine" easing="inout" center="20,50" />
+                        </animation>
+                        <animation type="conditional" condition="!Control.HasFocus($PARAM[id]) + !Control.HasFocus($PARAM[altid])">
+                            <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="20,50" />
+                        </animation>
+
                         <right>100</right>
                         <height>$PARAM[widget-type]_item_top</height>
                         <orientation>horizontal</orientation>
@@ -87,37 +103,45 @@
                         <itemgap>10</itemgap>
                         <visible>Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid])</visible>
                         <control type="label">
-                            <top>17</top>
+                            <top>12</top>
                             <left>15</left>
                             <width>auto</width>
                             <height>24</height>
                             <aligny>center</aligny>
-                            <font>font_tiny_bold</font>
+                            <font>font_small_bold</font>
                             <textcolor>main_fg_100</textcolor>
                             <label>$PARAM[label]</label>
                         </control>
-                        <control type="label">
-                            <top>17</top>
+                        <!-- <control type="label">
+                            <top>12</top>
                             <width>auto</width>
                             <label>|</label>
                             <aligny>center</aligny>
                             <textcolor>$VAR[ColorHighlight]</textcolor>
-                            <font>font_tiny_bold</font>
+                            <font>font_small_bold</font>
                             <height>24</height>
                             <visible>!String.IsEmpty(Container($PARAM[id]).ListItem.Label)</visible>
                         </control>
                         <control type="label">
-                            <top>17</top>
+                            <top>12</top>
                             <width>auto</width>
                             <label>$PARAM[altlabel]</label>
                             <label>$INFO[Container($PARAM[id]).ListItem.Label]</label>
                             <aligny>center</aligny>
                             <textcolor>main_fg_100</textcolor>
-                            <font>font_tiny</font>
+                            <font>font_small</font>
                             <height>24</height>
-                        </control>
+                        </control> -->
                     </control>
                     <control type="grouplist" description="Unfocused List">
+
+                        <animation type="conditional" condition="Control.HasFocus($PARAM[id]) | Control.HasFocus($PARAM[altid]))">
+                            <effect type="zoom" start="100" end="110" time="150"  tween="sine" easing="inout" center="20,50" />
+                        </animation>
+                        <animation type="conditional" condition="!Control.HasFocus($PARAM[id]) + !Control.HasFocus($PARAM[altid])">
+                            <effect type="zoom" start="110" end="100" time="150" tween="sine" easing="inout" center="20,50" />
+                        </animation>
+
                         <right>100</right>
                         <height>$PARAM[widget-type]_item_top</height>
                         <orientation>horizontal</orientation>
@@ -504,7 +528,10 @@
 
                 <animation type="Focus" condition="$PARAM[focusbounce]">
                     <effect type="zoom" start="96.5" end="100" time="150" tween="sine" easing="inout" center="auto"/>
-                    <effect type="fade" start="20" end="100" time="150" tween="back" easing="out"/>
+                    <effect type="fade" start="0" end="100" time="150"/>
+                </animation>
+                <animation type="Unfocus" condition="$PARAM[focusbounce]">
+                    <effect type="fade" start="100" end="0" time="150"/>
                 </animation>
                 <include content="Object_Control" condition="$PARAM[selectbox]">
                     <param name="type" value="group" />

@@ -59,5 +59,22 @@
             <visible>String.IsEmpty(Window(Home).Property(SkinSplashStarted)) | Integer.IsEqual(Container(301).NumItems,0) | Container(301).IsUpdating | Window.IsVisible(1116)</visible>
         </include>
 
+<control type="label">
+    <left>40</left>
+    <right>40</right>
+    <height>60</height>
+    <font>font_title_big</font>
+    <textcolor>main_fg_100</textcolor>
+    <align>center</align>
+    <!-- <label>$INFO[Window(Home).Property(CG_50200_CurrentWidget)]</label> -->
+    <label>$INFO[Window(Home).Property(TMDbHelper.WidgetContainer)]</label>
+    
+    <!-- <label>$INFO[CG_$PYTHON[50000 + int(mainmenuid) * 100])]</label> -->
+    <!-- <label>XXXXXX</label> -->
+<!-- <param name="visible" value="Control.HasFocus($PYTHON[30000 + int(mainmenuid) * 100 + int(id)]) | Integer.IsEqual(Window(Home).Property(CG_$PYTHON[50000 + int(mainmenuid) * 100]_CurrentWidget),$NUMBER[$PYTHON[30000 + int(mainmenuid) * 100 + int(id)]])" /> -->
+</control>
+
+
+
     </controls>
 </window>
